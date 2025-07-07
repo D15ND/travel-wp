@@ -1,0 +1,49 @@
+.upper__header {
+  @include media-mobile {
+    background-image: url("./assets/mobile/garrett_main.png");
+    background-size: auto;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.header {
+  background-color: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 1px 8px $color-green;
+  margin-bottom: 30px;
+  @include media-mobile {
+    background-color: transparent;
+    box-shadow: inset 0px 40px 15px -15px rgba(13, 96, 111, 0.7);
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    @include media-mobile {
+      padding-top: 45px;
+      margin-bottom: 43px;
+      max-width: 360px;
+    }
+  }
+
+  .logo__link {
+    width: 208px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    @include media-mobile {
+      width: auto;
+    }
+    .logo__subtitle {
+      font-size: 32px;
+      font-family: Magra;
+      font-weight: 700;
+      color: $color-white;
+      @include media-mobile {
+        display: none;
+      }
+    }
+  }
+}

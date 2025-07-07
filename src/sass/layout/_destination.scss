@@ -1,0 +1,104 @@
+.destination {
+  margin-bottom: 80px;
+  @include media-mobile {
+    margin-bottom: 20px;
+  }
+  .destination__subtitle {
+    display: flex;
+    justify-content: center;
+    font-family: Red Hat Text;
+    font-size: 40px;
+    font-weight: 500;
+    color: $color-orange;
+    margin-bottom: 46px;
+    @include media-mobile {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .slider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    gap: 60px;
+    overflow-x: hidden;
+    @include media-mobile {
+      margin-bottom: -30px;
+      position: relative;
+    }
+
+    .slider__arrow {
+      display: none;
+      @include media-mobile {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        top: 42%;
+      }
+    }
+
+    .slider__arrow-left {
+      @include media-mobile {
+        left: 6%;
+      }
+    }
+
+    .slider__arrow-right {
+      @include media-mobile {
+        right: 6%;
+        rotate: 180deg;
+      }
+    }
+  }
+
+  .slider__img {
+    border-radius: 16px;
+  }
+
+  .slider__swipe {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 33px;
+    @include media-mobile {
+      gap: 6px;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 2;
+    }
+    .slider__left-swipe, .slider__mid-swipe, .slider__right-swipe {
+      @include media-mobile {
+        pointer-events: none
+      }
+    }
+  }
+
+  .slider__icon-left,
+  .slider__icon-mid,
+  .slider__icon-right {
+    @include media-mobile {
+      width: 8px;
+    }
+  }
+
+  .slider__card {
+    img {
+      border-radius: 15px;
+      @include media-mobile {
+        position: relative;
+      }
+    }
+  }
+}
+
+.bg__orange {
+  background-color: $color-orange;
+  border-radius: 360px;
+}
+
+.ds__none {
+  display: none;
+}

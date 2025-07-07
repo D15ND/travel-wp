@@ -1,0 +1,61 @@
+.burger {
+  display: flex;
+  position: relative;
+  align-items: center;
+  z-index: 10;
+  height: 16px;
+  width: 26px;
+
+  @media screen and (min-width: 391px) {
+    display: none;
+  }
+
+  span {
+    height: 2px;
+    width: 26px;
+    background-color: $color-white;
+  }
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 26px;
+  background-color: $color-white;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active {
+  top: 20px;
+  right: 31%;
+  position: fixed;
+  overflow: hidden;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+.open {
+  display: flex !important;
+}

@@ -1,0 +1,35 @@
+html {
+  scrollbar-gutter: stable;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.upper__header {
+  background-image: url("./assets/desktop/garrett_rock.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stories__fone {
+  background-image: url("./assets/desktop/water_icerock.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  opacity: 0.7;
+}
+
+.footer {
+  background-image: url("./assets/desktop/water_icerock.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}

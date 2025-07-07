@@ -20,12 +20,21 @@ module.exports = {
           loader: 'babel-loader',  // Добавляем babel
           options: {
             presets: ['@babel/preset-env'],
+            sourceType: 'module'
           },
         },
       },
       {
         test: /\.css$/, // Обработка CSS
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i, // Загрузка изображений
