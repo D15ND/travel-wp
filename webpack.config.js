@@ -61,7 +61,10 @@ module.exports = {
     open: true,
     hot: true,
     liveReload: true,   // автообновление страницы браузера
-    watchFiles: ['src/**/*']  // отслеживает обновление не только js но и css & sass
+    watchFiles: ['src/**/*'],  // отслеживает обновление не только js но и css & sass
+    client: {
+      logging: 'error',  // показывать только ошибки
+    },
   },
   devtool: 'source-map', // Для отладки
 };
